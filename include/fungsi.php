@@ -9,12 +9,12 @@ function getbukulist($id){
 	return $data['judul'];
 }
 
-//function getbukulist1($id){
-//	$sql="select * judul from buku where id='".$id."'";
-//	$hasil1 = mysql_query($sql1);
-//	$data1 = mysql_fetch_array($hasil1);
-//	return $data1['judul'];
-//}
+function getbukulist1($id){
+	$sql="select * judul from buku where id='".$id."'";
+	$hasil = mysql_query($sql);
+	$data = mysql_fetch_array($hasil);
+	return $data['judul'];
+}
 
 function getNamaKategori($id_kategori) {
 	

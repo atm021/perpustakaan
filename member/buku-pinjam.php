@@ -49,9 +49,9 @@ $status = $_POST ['status'];
 $sql = "INSERT INTO peminjaman SET
 			id_buku = '$judul',
 			id_user = '$peminjam',
-			tanggal_pinjam = NOW(),
+			tanggal_pinjam = CURDATE(),
 			lama = '$lama',
-			tanggal_kembali = NOW() +'$lama',
+			tanggal_kembali = CURDATE() +'$lama',
 			status_peminjaman = '$status'
 			";
 mysql_query($sql, $koneksi) or die ("SQL Error : ".mysql_error());

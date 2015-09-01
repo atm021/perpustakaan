@@ -23,7 +23,8 @@ if (isset($_POST['username']))
 				$_SESSION['login']=1;
 				$_SESSION['username']=$username;
 				header("location: index.php");
-				} else {
+				}
+				 else {
 				$error = "Username atau Password Tidak Ada";
 				}
 			//if ($_SESSION['username']!='admin') {
@@ -32,6 +33,7 @@ if (isset($_POST['username']))
 				mysql_close($koneksi);
 	}
 }
+
 ?>
 <div class="contrainer">
 	<div class="row">
